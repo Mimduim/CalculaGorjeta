@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Gorjeta</string>
+    <string name="total_conta">Total Conta</string>
+    <string name="dez_porcento">10%</string>
+    <string name="quinze_porcento">15%</string>
+    <string name="vinte_porcento">20%</string>
+    <string name="gorjeta">Gorjeta</string>
+    <string name="total">Total</string>
+    <string name="dividido">Resto/Divisão</string>
+    <string name="pessoas">Pessoas</string>
+    <string name="personalizado">Personalizado</string>
+</resources>

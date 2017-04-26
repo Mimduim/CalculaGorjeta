@@ -66,6 +66,7 @@ public class GorjetaActivity extends AppCompatActivity {
         });
     }
 
+
     class ContaTextWatcher implements TextWatcher {
 
 
@@ -77,16 +78,37 @@ public class GorjetaActivity extends AppCompatActivity {
         @Override
         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-            // converter para float
-            float valor = Float.parseFloat(charSequence.toString());
+            if (charSequence.length() > 0){
+                float valor = Float.parseFloat(charSequence.toString());
+                // atualizar o objeto modelo
+                calculadora.setValorConta(valor);
+                // atualizar tela
+                GorjetaActivity.this.atualizarTela();
+            }else{
+                // atualizar o objeto modelo
+                calculadora.setValorConta(0);
+                // atualizar tela
+                GorjetaActivity.this.atualizarTela();
+            }
+        }
 
-            // atualizar o objeto modelo
-            calculadora.setValorConta(valor);
+        @Override
+        public void afterTextChanged(Editable editable) {
 
+        }
+    }
+
+    class PessoaTextWatcher implements TextWatcher{
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int i, int i1, int i2) {
+
+        }
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
             // atualizar tela
             GorjetaActivity.this.atualizarTela();
         }
-
         @Override
         public void afterTextChanged(Editable editable) {
 
